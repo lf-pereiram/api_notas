@@ -1,0 +1,78 @@
+/* Pone la barra de navegacion estatica */
+nav ul a {
+  display: flex !important;
+}
+
+/* Organiza el cuerpo de la plataforma para que la barra de navegacion quede de manera estatica */
+ body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+/* La seccion main es la que guarda el contenido principal de la plataforma */
+main {
+  flex: 1 0 auto;
+}
+
+/* Margenes del contenido que se encuentra en la seccion main */
+main > .row {
+	margin-top: 1% !important;
+	margin-right: 1% !important;
+}
+
+/* Margenes del contenido que se encuentra en la seccion main */
+.main-section {
+  padding-top: 20px !important;
+}
+
+/* Se organiza el formulario de la plantilla index.html */
+form>.fomulario {
+  border-left: 8px ;
+  border-style: groove;
+  border-radius: 15px;
+}
+
+/* Navegador lateral de toda la plataforma. Se acomoda de manera estatica y que se vaya ajustando al texto */
+.sidenav {
+    list-style-type: none;
+    background-color: #f1f1f1;
+    overflow: auto;
+    margin: 0;
+    padding: 0;
+}
+
+/* Opciones del navegador lateral */
+.sidenav>li a {
+    display: block;
+    padding: 8px 16px;
+}
+
+/* Opciones del navegador lateral */
+.sidenav>li {
+	text-align: center;
+}
+
+/* Margenes */
+.active {
+    background-color: #4CAF50;
+    color: white;
+    width: 100%;
+}
+
+/* Margenes */
+.collection {
+	margin: 0 !important;
+}
+
+/* Margenes */
+.breadcrumb {
+	font-size: 27px !important;
+	margin-left: 2% !important;
+	color: #fff;
+}
+
+/* Margenes */
+.masActividades {
+	margin-right: 1% !important;
+}

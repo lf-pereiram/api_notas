@@ -1,0 +1,66 @@
+doctype html
+// Plantilla inicial que deja de manera estatica la barra de navegacion lateral la barra de navegacion posterior y el footer
+html
+  head
+    meta(charset='UTF-8')
+    // Import Google Icon Font
+    link(href='http://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css')
+    // Import materialize.css
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css')
+    link(type='text/css', rel='stylesheet', href='../css/main.css')
+    title Document
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title
+  body
+    // barra de anvegacion
+    .navbar-fixed
+      nav
+        .nav-wrapper.teal.darken-4
+          a.brand-logo(href='#!', style='margin-left: 2%') cursos
+          ul.right.hide-on-med-and-down
+            li
+              a(href='badges.html')
+                i.fa.fa-github.fa-3x(aria-hidden='true')
+    // Contenido principal de la plataforma
+    main
+      .row
+        .col.s4.m4.l2
+          ul.sidenav
+            li
+              .userView.teal.darken-3
+                a(href='#!user')
+                  img.circle.responsive-img(src='../img/docente.JPG')
+                a(href='#!name')
+                  span.black-text.name Andres Herrera
+            li
+              a(href='javascript:void(0)', onclick="cargarVista('misCursos')") Inicio
+            li
+              a(href='javascript:void(0)', onclick="cargarVista('listaActividades')") Actividades
+            li
+              a(href='javascript:void(0)', onclick="cargarVista('estudiantes')") Listado Estudiantes
+            li
+              a(href='javascript:void(0)', onclick="cargarVista('actividadesRecibidas')") Actividades Recibidas
+            li
+              a(href='javascript:void(0)', onclick="cargarVista('verActividad')") Ver actividad
+        // Seccion que permite cargar las diferentes funcionales de manera dinamica
+        #contenedor.col.s8.m8.l10
+          block contenido
+          // Seccion donde se carga el contenido que se vaya seleccionando
+    // Footer de la plataforma
+    footer.page-footer.teal.darken-3
+      .container
+        .row
+          .col.l6.s12
+            h5.white-text Footer Content
+            p.grey-text.text-lighten-4 You can use rows and columns here to organize your footer content.
+          .col.l4.offset-l2.s12
+            h5.white-text Links
+      .footer-copyright
+        .container
+          | © 2016 Copyright
+    script(src='https://code.jquery.com/jquery-3.1.1.min.js')
+    script(src='https://code.jquery.com/ui/1.12.1/jquery-ui.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js')
+    script(type='text/javascript', src='../js/docente.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.0/jquery.validate.min.js')
