@@ -1,0 +1,38 @@
+extends ./layout.jade
+block contenido 
+  // Actividades que tiene un estudiante pendiente
+  .nav-wrapper.teal.darken-3
+    a.breadcrumb(href='#') ACTIVIDADES
+  .tablaActividades
+    table#tablaActividades.striped
+      thead
+        tr
+          th(data-field='id') Actividad
+          th(data-field='name') Fecha Entrega
+          th(data-field='name') Adjuntar Actividad
+      tbody
+        tr
+          td Actividad 1
+          td 10/10/2016
+          td
+            i.material-icons play_for_work
+        tr
+          td Actividad 2
+          td 10/10/2016
+          td
+            i.material-icons play_for_work
+        tr
+          td Actividad 3
+          td 10/10/2016
+          td
+            i.material-icons play_for_work
+        tr
+          td Actividad 4
+          td 10/10/2016
+          td
+            i.material-icons play_for_work
+        tr
+          td Actividad 5
+          td 10/10/2016
+          td
+            i.material-icons play_for_work

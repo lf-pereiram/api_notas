@@ -1,0 +1,29 @@
+extends ./layout.jade
+block contenido
+  // Lista de las actividades creadas por el docente
+  .nav-wrapper.teal.darken-3
+    a.breadcrumb(href='#') ACTIVIDADES
+    a.btn-floating.waves-effect.waves-light.teal.right.masActividades(href='/users/actividades/nuevo')
+      i.material-icons add
+  .tablaActividades
+    table#listaActividades.striped
+      thead
+        tr
+          th(data-field='id') Actividad
+          th(data-field='name') Fecha Entrega
+      tbody
+        tr
+          td Actividad 1
+          td 10/10/2016
+        tr
+          td Actividad 2
+          td 10/10/2016
+        tr
+          td Actividad 3
+          td 10/10/2016
+        tr
+          td Actividad 4
+          td 10/10/2016
+        tr
+          td Actividad 5
+          td 10/10/2016

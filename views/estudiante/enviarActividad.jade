@@ -1,0 +1,23 @@
+extends ./layout.jade
+block contenido
+  // Formulario que permite a un estudiante adjuntar el codigo de la actividad que se va a realizar
+  .collection
+    .nav-wrapper.teal.darken-3
+      a.breadcrumb(href='#!') Entregar Actividad
+    .card.horizontal
+      select.browser-default
+        option(value='', disabled='', selected='') Seleccione la actividad a entregar
+        option(value='1') Actividad 1
+        option(value='2') Actividad 2
+        option(value='3') Actividad 3
+    form(action='#')
+      .file-field.input-field
+        .btn
+          span Adjuntar Codigo
+          input(type='file')
+        .file-path-wrapper
+          input.file-path.validate(type='text')
+    .col.s6.push-s4
+      button.btn.waves-effect.waves-light(type='submit', name='action')
+        | Enviar Actividad
+        i.material-icons.right send

@@ -30,19 +30,15 @@ html
             li
               .userView.teal.darken-3
                 a(href='#!user')
-                  img.circle.responsive-img(src='../img/docente.JPG')
+                  img.circle.responsive-img(src='../img/estud.JPG')
                 a(href='#!name')
-                  span.black-text.name Andres Herrera
+                  span.black-text.name Estudiante1
             li
-              a(href='javascript:void(0)', onclick="cargarVista('misCursos')") Inicio
+              a(href='/inicio') Cursos
             li
-              a(href='javascript:void(0)', onclick="cargarVista('listaActividades')") Actividades
+              a(href='/actividades') Lista Actividades
             li
-              a(href='javascript:void(0)', onclick="cargarVista('estudiantes')") Listado Estudiantes
-            li
-              a(href='javascript:void(0)', onclick="cargarVista('actividadesRecibidas')") Actividades Recibidas
-            li
-              a(href='javascript:void(0)', onclick="cargarVista('verActividad')") Ver actividad
+              a(href='/enviar') Enviar Actividades
         // Seccion que permite cargar las diferentes funcionales de manera dinamica
         #contenedor.col.s8.m8.l10
           block contenido
@@ -60,7 +56,6 @@ html
         .container
           | © 2016 Copyright
     script(src='https://code.jquery.com/jquery-3.1.1.min.js')
-    script(src='https://code.jquery.com/ui/1.12.1/jquery-ui.js')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js')
-    script(type='text/javascript', src='../js/docente.js')
+    script(type='text/javascript', src='../js/estudiante.js')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.0/jquery.validate.min.js')

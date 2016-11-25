@@ -8,7 +8,10 @@ html(lang='en')
     link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css')
     // Import materialize.css
     link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css')
-    link(rel='stylesheet', href='css/main.css')
+    link(rel='stylesheet', href='http://www.w3schools.com/lib/w3.css')
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Lato')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+    link(rel='stylesheet', href='/css/main.css')
     title Document
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     script(src='http://code.jquery.com/jquery-1.7.1.min.js')
@@ -17,30 +20,45 @@ html(lang='en')
     .navbar-fixed
       nav
         .nav-wrapper.teal.darken-4
-          a.brand-logo(href='#!') Logo
+          a.brand-logo(href='#!') Academoodle
           ul.right.hide-on-med-and-down
             li
               a(href='#')
                 i.fa.fa-github.fa-3x(aria-hidden='true')
     main
-      .container
-        .row.main-section
-          form.col.s6.push-s3.teal.lighten-5.formulario(action='/users', method='POST')
-            .row
-              .row
-                .input-field.col.s12
-                  i.material-icons.prefix account_circle
-                  input#email.validate(type='email', name='email')
-                  label(for='email') Email
-              .row
-                .input-field.col.s12
-                  i.material-icons.prefix vpn_key
-                  input#password.validate(type='password', name='password')
-                  label(for='password') Password
-              .col.s6.push-s4
-                button#login.btn.waves-effect.teal
-                  | Entrar
-                  i.material-icons.right send
+      .slider
+        ul.slides
+          li
+            img(src='/img/uniquindio.png')
+            // random image
+            .caption.center-align
+              h3 Este es el mejor sitio de Administración academica
+              h5.light.grey-text.text-lighten-3 Acá podras encontrar las calificaciones
+          li
+            img(src='/img/libros.JPG')
+            // random image
+            .caption.right-align
+              h3 Estan todos los espacios academicos
+              h5.light.grey-text.text-lighten-3 Acá podras subir tus trabajos
+          li
+            img(src='/img/codig.JPG')
+            // random image
+            .caption.left-align
+              h3 Ademas podras subir el código fuente
+              h5.light.grey-text.text-lighten-3 Si. Es cierto puedes subir tú código fuente
+          li
+            img(src='/img/formulas.JPG')
+            // random image
+            .caption.center-align
+              h3 Y solo te debes loguear 
+              h5.light.grey-text.text-lighten-3 ingresa aquí con tu cuenta de Github
+      br
+      br
+      .col.s6.push-s4.center
+        a#login.btn.waves-effect.teal(href='/auth/github')
+          | Ingresar 
+          i.fa.fa-github.fa-3x(aria-hidden='true')
+        br
     footer.page-footer.teal.darken-3
       .container
         .row
@@ -56,3 +74,4 @@ html(lang='en')
     // Import jQuery before materialize.js
     script(type='text/javascript', src='https://code.jquery.com/jquery-2.1.1.min.js')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js')
+    script(type='text/javascript', src='/js/index.js')

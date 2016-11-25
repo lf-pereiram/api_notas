@@ -1,0 +1,17 @@
+extends ./layout.jade
+block contenido 
+  // Formulario que permite crear una nueva tarea y agregarla a la lista de actividades
+  .card-panel
+    form#form(action='#', method='post', novalidate='novalidate')
+      .row
+        .input-field.col.s12
+          input#activity.validate(placeholder='Actividad', name='activity', type='text')
+        .input-field.col.s12
+          textarea#description.materialize-textarea(name='description', placeholder='Breve descripción de la actividad')
+        .input-field.col.s12
+          input#date.datepicker(type='date', name='date')
+        .col.s12
+          a.col.s1.push-s5.btn.btn-default(type='submit', onclick='validar()')
+            i.material-icons done
+  a.col.s1.push-s11.btn.btn-default(type='submit', value='submit', onclick='cancel()')
+    i.material-icons clear
